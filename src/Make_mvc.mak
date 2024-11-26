@@ -530,6 +530,13 @@ CON_LIB = $(CON_LIB) /DELAYLOAD:comdlg32.dll /DELAYLOAD:ole32.dll DelayImp.lib
 #VIMRCLOC = somewhere
 #VIMRUNTIMEDIR = somewhere
 
+# https://stackoverflow.com/questions/277258/how-do-i-see-a-c-c-source-file-after-preprocessing-in-visual-studio
+# https://learn.microsoft.com/en-us/cpp/build/reference/fi-preprocess-output-file-name?view=msvc-170
+# CL /P /Fi".\\preprocessed\\" main.cpp helper.cpp
+#
+# rmdir /s /q preprocessed
+# mkdir preprocessed
+# CFLAGS = /P /Fi".\\preprocessed\\" -c /W3 /GF /nologo -I. -Iproto -DHAVE_PATHDEF -DWIN32 -DHAVE_STDINT_H \
 CFLAGS = -c /W3 /GF /nologo -I. -Iproto -DHAVE_PATHDEF -DWIN32 -DHAVE_STDINT_H \
 		$(CSCOPE_DEFS) $(TERM_DEFS) $(SOUND_DEFS) $(NETBEANS_DEFS) \
 		$(NBDEBUG_DEFS) $(XPM_DEFS) $(SOD_DEFS) $(SOD_INC) \

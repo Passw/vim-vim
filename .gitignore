@@ -119,3 +119,8 @@ src/cscope.out
 /.cache/clangd/
 /.ccls-cache/
 /compile_commands.json
+
+src/pathdef.i
+src/preprocessed/
+src/version.i
+src/ObjDXOUHAMD64/
