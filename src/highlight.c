@@ -5461,7 +5461,7 @@ f_hlset(typval_T *argvars, typval_T *rettv)
  * "old".
  */
     void
-update_highlight_overrides(hl_override_T *old, hl_override_T *new, int newlen)
+update_highlight_overrides(hl_override_T *old, hl_override_T *new_hl, int newlen)
 {
     if (old == NULL)
 	return;
