@@ -5470,7 +5470,7 @@ update_highlight_overrides(hl_override_T *old, hl_override_T *new_hl, int newlen
     {
 	if (set->arr == old)
 	{
-	    set->arr = new;
+	    set->arr = new_hl;
 	    set->len = newlen;
 	    break;
 	}
